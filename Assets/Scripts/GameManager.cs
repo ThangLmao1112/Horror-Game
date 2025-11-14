@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
 
     System.Collections.IEnumerator ShowWarning()
     {
-        warningText.text = "⚠️ SÁT NHÂN ĐÃ XUẤT HIỆN! ⚠️";
+        warningText.text = "Hình như đằng sau có tiếng gì đó";
         yield return new WaitForSeconds(5f); // Hiện 5 giây
         warningText.text = "";
     }

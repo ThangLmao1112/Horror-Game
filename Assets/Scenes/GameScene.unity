@@ -844,7 +844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &367867001
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1395,7 +1395,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 150}
+  m_AnchoredPosition: {x: 0, y: -450}
   m_SizeDelta: {x: 800, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694361635
@@ -1420,7 +1420,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 70
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2784,7 +2784,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 29929d8704623d94a959df97227e503b, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 77111474e57b5a24aae755a02abe6785, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &1492152979
 PrefabInstance:
@@ -3997,7 +3997,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "[Nh\u1EA5n E \u0111\u1EC3 ti\u1EBFp t\u1EE5c]"
+  m_Text: "[Nh\u1EA5n Q \u0111\u1EC3 ti\u1EBFp t\u1EE5c]"
 --- !u!114 &505407544993462180
 MonoBehaviour:
   m_ObjectHideFlags: 0

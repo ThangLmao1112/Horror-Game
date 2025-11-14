@@ -25,6 +25,7 @@ public class CollectibleItem : MonoBehaviour
             if (clueStory != null)
             {
                 clueStory.ShowClue(currentClueIndex);
+                
             }
         }
 

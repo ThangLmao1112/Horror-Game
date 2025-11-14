@@ -12,6 +12,12 @@ public class ClueStory : MonoBehaviour
 
     private bool isReadingClue = false;
 
+    // Hàm public để các script khác kiểm tra trạng thái
+    public bool IsReadingClue()
+    {
+        return isReadingClue;
+    }
+
     void Start()
     {
         // Ẩn panel khi bắt đầu
@@ -119,8 +125,7 @@ public class ClueStory : MonoBehaviour
 
     void Update()
     {
-        // Nếu đang đọc manh mối, nhấn E để đóng
-        if (isReadingClue && Input.GetKeyDown(KeyCode.E))
+        if (isReadingClue && Input.GetKeyDown(KeyCode.Q))
         {
             CloseClue();
         }
