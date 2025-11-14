@@ -2,34 +2,39 @@
 
 public class CollectibleItem : MonoBehaviour
 {
-    [Header("Thu thập vật phẩm")]
+    [Header("Thông tin vật phẩm")]
     public string itemName = "Manh mối bí ẩn";
-    public AudioClip collectSound; // Âm thanh khi thu thập (tùy chọn)
+    public AudioClip collectSound;
 
-    private void OnTriggerEnter(Collider other)
+    public void Collect()
     {
-        // Kiểm tra xem có phải người chơi chạm vào không
-        if (other.CompareTag("Player"))
-        {
-            CollectItem();
-        }
-    }
+        Debug.Log("Nhặt vật phẩm: " + itemName);
 
-    void CollectItem()
-    {
-        // Thông báo cho GameManager
-        if (GameManager.Instance != null)
+        // Tìm GameManager
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        if (gameManager != null)
         {
-            GameManager.Instance.CollectClue();
+            // LẤY INDEX HIỆN TẠI TRƯỚC KHI TĂNG
+            int currentClueIndex = gameManager.GetCollectedClues();
+
+            // TĂNG SỐ MANH MỐI
+            gameManager.CollectClue();
+
+            // HIỂN THỊ CÂU CHUYỆN
+            ClueStory clueStory = FindObjectOfType<ClueStory>();
+            if (clueStory != null)
+            {
+                clueStory.ShowClue(currentClueIndex);
+            }
         }
 
-        // Phát âm thanh (nếu có)
+        // Phát âm thanh
         if (collectSound != null)
         {
             AudioSource.PlayClipAtPoint(collectSound, transform.position);
         }
 
-        // Xóa vật phẩm khỏi game
+        // Xóa vật phẩm
         Destroy(gameObject);
     }
 }
